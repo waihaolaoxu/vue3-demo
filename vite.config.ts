@@ -1,11 +1,19 @@
-import path from 'path'
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
-module.exports = {
-    alias: {
-        '@/': path.resolve(__dirname, './src')
+// https://vitejs.dev/config/
+export default defineConfig({
+    resolve: {
+        alias: [
+            { find: '/@/', replacement: resolve(__dirname, 'src') }
+        ]
     },
     optimizeDeps: {
         include: ['lodash']
     },
-    proxy: {}
-}
+    server: {
+        proxy: {}
+    },
+    plugins: [vue()],
+})
