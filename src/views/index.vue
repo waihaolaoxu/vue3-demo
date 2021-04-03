@@ -2,6 +2,7 @@
     <div class="homePage">
         <p>第 {{ year }} 年</p>
         <p>姓名：{{ nickname }}</p>
+        <p>性别：{{ gender }}</p>
         <p>年龄：{{ age }}</p>
         <p>vuex：{{ vuex }}</p>
     </div>
@@ -15,9 +16,9 @@ export default defineComponent({
         const store = useStore();
         const year = ref(0);
         const user = reactive({ 
-            nickname: "xiaofan", 
-            age: 26, 
-            gender: "女" 
+            nickname: "前端老徐", 
+            age: 1, 
+            gender: "男" 
         });
         setInterval(() => {
             year.value++;
