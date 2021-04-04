@@ -9,7 +9,8 @@
 
 <script lang="ts">
 import useCount from "../hooks/useCount";
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
     setup() {
         const { count, multiple, increase, decrease } = useCount(10);
         return {
@@ -19,5 +20,5 @@ export default {
             decrease,
         };
     },
-};
+});
 </script>

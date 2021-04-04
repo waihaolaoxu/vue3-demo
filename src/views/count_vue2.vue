@@ -8,8 +8,9 @@
         </div>
     </div>
 </template>
-<script  lang="ts">
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
     data() {
         return { count: 0 };
     },
@@ -26,5 +27,5 @@ export default {
             this.count--;
         },
     },
-};
+});
 </script>
